@@ -1,0 +1,23 @@
+{
+  "skill_name": "laravel-slim-architecture",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Refactor app/Http/Controllers/CategoryController.php so it follows our architecture conventions properly. Create whatever supporting classes you need.",
+      "expected_output": "Controller methods shrink to a single call into an Action/Service per method; Category::create/update/delete calls move out of the controller into app/Actions/Category/*; new PHP files have declare(strict_types=1) and typed properties; controller still returns the same Inertia::render/RedirectResponse shapes so routes/pages keep working.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "I need a quick CRUD for a new 'Tag' entity - just a name field, nothing fancy. Controller, migration, model, form requests, the works, following our stack (Inertia + React pages like the other entities).",
+      "expected_output": "New TagController has only FormRequest params + a single Action/Service call per method; writes (create/update/delete) live in app/Actions/Tag/ or a TagService, not in the controller; all new PHP files start with declare(strict_types=1) and use typed properties; any Action with more than one DB write is wrapped in DB::transaction().",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Can you review app/Http/Controllers/CategoryController.php and tell me what's wrong with it architecturally? Don't fix it yet, just tell me what you'd change and why.",
+      "expected_output": "A review (not a refactor) that calls out: direct Model calls in the controller, missing declare(strict_types=1), no Action/Service layer, and explains the fix direction - without actually editing the file.",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "igor-marketplace",
+  "owner": {
+    "name": "Igor's Team",
+    "email": "platform@your-org.example",
+    "url": "https://github.com/igonaf/marketplace"
+  },
+  "plugins": [
+    {
+      "name": "laravel-scaffolder",
+      "source": "./plugins/laravel-scaffolder",
+       "description": "Demo plugin for homework 5.6 — handle main laravel wrappers and basic security",
+      "version": "1.0.0",
+      "category": "ops",
+      "tags": ["deploy", "release", "checklist", "ops"],
+      "author": {
+        "name": "Platform Team",
+        "email": "platform@your-org.example"
+      },
+      "strict": true
+    }
+  ]
+}

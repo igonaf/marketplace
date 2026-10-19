@@ -1,0 +1,10 @@
+{
+  "name": "laravel-scaffolder",
+  "description": "Demo plugin for homework 5.6 — handle main laravel wrappers and basic security",
+  "version": "1.0.0",
+  "author": {
+    "name": "Igor",
+    "url": "https://github.com/igonaf"
+  },
+  "keywords": ["demo", "lecture-5.5"]
+}
